@@ -1,0 +1,77 @@
+.like input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .like {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  svg {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    transition: all 0.3s;
+    fill: #666;
+  }
+  
+  svg:hover {
+    transform: scale(1.1) rotate(-10deg);
+  }
+  
+  .like input:checked ~ svg {
+    fill: #2196F3;
+  }
+  /*  */
+  .button {
+    cursor: pointer;
+    position: relative;
+    font-size: 1.2em;
+    padding: 0.7em 1.4em;
+    background-color: #FECC09;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5em;
+    color: white;
+    box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.055);
+  }
+  
+  .button::before {
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, white 0%, white 50%, #FECC09 50%, #ffd014 60%);
+    border-radius: 0 0 0.5em 0;
+    box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.13);
+    transition: 0.3s;
+  }
+  
+  .button:hover::before {
+    width: 1.6em;
+    height: 1.6em;
+  }
+  
+  .button:active {
+    box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+    transform: translate(0.1em, 0.1em);
+  }
+  @media screen and (max-width: 768px) {
+    .button {
+      background-color: white;
+      color: #FECC09;
+    }
+    .button::before {
+      background: linear-gradient(135deg,#FECC09 50%, #ffd014 60%, white 0%, white 50%);
+    }
+  }
