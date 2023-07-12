@@ -9,6 +9,10 @@
 body{
     font-family: 'Quicksand', sans-serif;
 }
+header.sticky{
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    padding: 0; 
+}
 .navbar-container{
     width: 100%;
     position: fixed;
@@ -17,8 +21,10 @@ body{
     justify-content: space-around;
     align-items: center;
     margin: 0 auto;
+    padding: 10px 0;
     z-index: 999;
     backdrop-filter: blur(10px);
+    transition: all 0.2s;
 }
 .navbar-container .logo{
     display: flex;
